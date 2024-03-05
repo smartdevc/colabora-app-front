@@ -1,7 +1,7 @@
 import { model } from "@angular/core";
 
 
-class Cause {
+export class Cause {
 
     private _id!: number;
 
@@ -30,6 +30,7 @@ class Cause {
         this._description = value;
     }
 
+    
 
 }
 
