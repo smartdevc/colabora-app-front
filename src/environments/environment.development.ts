@@ -9,10 +9,33 @@ export const environment = {
         deleteCause: ''
     },
     project : {
-        getAllProject: '/api/projects',        
+        getAllProject: '/api/projects',
+        getProjectById: '',
+        createProject: '',
+        updateProject: '',
+        deleteProject: ''
+
+    },
+    organization: {
+        getAllOrganization: '',
+        getOrganizationById: '',
+        createOrganization: '',
+        updateOrganization: '',
+        deleteOrganization: '',
+    },
+    profile: {
+        getAllProfile: '',
+        getProfileById: '',
+        createProfile: '',
+        updateProfile: '',
+        deleteProfile: ''
+    },
+    user: {
+        getAllUser: '',
+        getUserById: '',
+        createUser: '',
+        updateUser: '',
+        deleteUser: ''
     }
-
-
-
 
 };

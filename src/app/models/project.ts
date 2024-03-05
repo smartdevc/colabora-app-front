@@ -1,6 +1,6 @@
 import { model } from "@angular/core";
 
-class Project {
+export class Project {
 
     private _id!: number;
 
