@@ -10,32 +10,32 @@ export const environment = {
     },
     project : {
         getAllProject: '/api/projects',
-        getProjectById: '',
-        createProject: '',
-        updateProject: '',
-        deleteProject: ''
+        getProjectById: '/api/projects/',
+        createProject: '/api/projects',
+        updateProject: '/api/projects/',
+        deleteProject: '/api/projects/'
 
     },
     organization: {
-        getAllOrganization: '',
-        getOrganizationById: '',
-        createOrganization: '',
-        updateOrganization: '',
-        deleteOrganization: '',
+        getAllOrganization: '/api/organizations',
+        getOrganizationById: '/api/organizations/',
+        createOrganization: '/api/organizations',
+        updateOrganization: '/api/organizations/',
+        deleteOrganization: '/api/organizations/',
     },
     profile: {
-        getAllProfile: '',
-        getProfileById: '',
-        createProfile: '',
-        updateProfile: '',
-        deleteProfile: ''
+        getAllProfile: '/api/profiles',
+        getProfileById: '/api/profiles/',
+        createProfile: '/api/profiles',
+        updateProfile: '/api/profiles/',
+        deleteProfile: '/api/profiles/'
     },
     user: {
-        getAllUser: '',
-        getUserById: '',
-        createUser: '',
-        updateUser: '',
-        deleteUser: ''
+        getAllUser: '/api/users',
+        getUserById: '/api/users/',
+        createUser: '/api/users',
+        updateUser: '/api/users/',
+        deleteUser: '/api/users/'
     }
 
 };
