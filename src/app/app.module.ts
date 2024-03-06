@@ -7,6 +7,7 @@ import { CauseComponent } from './components/cause/cause.component';
 import { CauseListComponent } from './components/cause/cause-list/cause-list.component';
 import { CauseModalComponent } from './components/cause/cause-modal/cause-modal.component';
 import { CauseGridComponent } from './components/cause/cause-grid/cause-grid.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CauseGridComponent } from './components/cause/cause-grid/cause-grid.com
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
