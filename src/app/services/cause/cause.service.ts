@@ -1,30 +1,42 @@
 import { Injectable } from '@angular/core';
-import { Cause } from '../../models/cause.model';
+import { Project } from '../../models/project';
 import { environment } from '../../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CauseService {
+export class ProjectService {
 
-
-  private cause!:Cause;
-  baseUrl = environment.backendUrl;
+  private project!: Project;
+  baseUrl = environment.backendUrl
+  getAllProjectPath=environment.project.getAllProject;
+  getProjectByIdpath=environment.project.getProjectById;
+  createProjectPath=environment.project.createProject;
+  updateProjectPath=environment.project.updateProject;
+  deleteProjectPath=environment.project.deleteProject;
 
 
   constructor(private http: HttpClient) { }
 
-  getAllCauses(){
-    return this.http.get<any>(this.baseUrl);
+  getAllProject(){
+    return this.http.get<any>(this.baseUrl+this.getAllProjectPath);
   }
 
-  getCauseById(id:number){
+  getProjectById(id:number){
+    return this.http.get<any>(`${this.baseUrl}${this.getProjectByIdpath}/${id}`);
   }
 
-  createCause(cause:Cause){}
+  createProject(project:Project){
+    return this.http.post<any>(this.baseUrl+this.createProjectPath, project);
+  }
   
-  updateCause(cause:Cause){}
+  updateProject(project:Project){
+    return this.http.put<any>(this.baseUrl+this.updateProjectPath, project);
+  }
 
-  deleteCause(id:number){}
+  deleteProject(id:number){
+    return this.http.delete<any>(`${this.baseUrl}${this.deleteProjectPath}/${id}`);
+  }
 }
+
