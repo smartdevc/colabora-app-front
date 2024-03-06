@@ -14,7 +14,7 @@ export class CauseService {
   baseUrl = environment.backendUrl;
 
   getAllCausesPath=environment.cause.getAllCauses;
-  getCauseByIdpath=environment.cause.getCauseById;
+  getCauseByIdPath=environment.cause.getCauseById;
   createCausePath=environment.cause.createCause;
   updateCausePath=environment.cause.updateCause;
   deleteCausePath=environment.cause.deleteCause;
@@ -26,7 +26,8 @@ export class CauseService {
   }
 
   getCauseById(id:number){
-    return this.http.get<any>(`${this.baseUrl}${this.getCauseByIdpath}/${id}`);
+    let url =this.baseUrl+this.getCauseByIdPath;
+    return this.http.get<any>(url+id);
   }
 
   createCause(cause:Cause){
@@ -38,7 +39,8 @@ export class CauseService {
   }
 
   deleteCause(id:number){
-    return this.http.delete<any>(`${this.baseUrl}${this.deleteCausePath}/${id}`);
+    let url =this.baseUrl+this.deleteCausePath;
+    return this.http.delete<any>(url+id);
   }
 }
 
