@@ -8,6 +8,8 @@ import { CauseListComponent } from './components/cause/cause-list/cause-list.com
 import { CauseModalComponent } from './components/cause/cause-modal/cause-modal.component';
 import { CauseGridComponent } from './components/cause/cause-grid/cause-grid.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { ProjectGridComponent } from './components/project/project-grid/project-grid.component';
+import { ProjectModalComponent } from './components/project/project-modal/project-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CauseComponent,
     CauseListComponent,
     CauseModalComponent,
-    CauseGridComponent
+    CauseGridComponent,
+    ProjectGridComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
