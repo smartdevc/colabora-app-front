@@ -3,10 +3,10 @@ export const environment = {
     backendUrl: 'localhost:8088',
     cause: {
         getAllCauses: '/api/causes',
-        getCauseById: '',
-        createCause: '',
-        updateCause: '',
-        deleteCause: ''
+        getCauseById: '/api/causes/',
+        createCause: '/api/causes',
+        updateCause: '/api/causes/',
+        deleteCause: '/api/causes/'
     },
     project : {
         getAllProject: '/api/projects',
