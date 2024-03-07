@@ -5,8 +5,30 @@
     background-size: cover;
   }
 
-  .cards-container{    
-    max-width: fit-content;
+  .cards-container {
     display: flex;
-   justify-content: space-between
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.example-card {
+    width: calc(33.33% - 20px); /* 20px de espacio entre las tarjetas */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .example-card {
+        width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .example-card {
+        width: 100%; /* Una tarjeta por fila en pantallas aún más pequeñas */
+    }
+
+    
+}
+    
+
+    
