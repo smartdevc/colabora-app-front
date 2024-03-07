@@ -6,6 +6,9 @@ export class Project {
 
     private _name!: string;
 
+    private _description!: string;
+   
+
     private _dateStart!: string;
 
     private _dateEnd!: string;
@@ -23,6 +26,13 @@ export class Project {
     }
     public set name(value: string) {
         this._name = value;
+    }
+
+    public get description(): string {
+        return this._description;
+    }
+    public set description(value: string) {
+        this._description = value;
     }
 
     

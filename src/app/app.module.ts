@@ -10,6 +10,10 @@ import { CauseGridComponent } from './components/cause/cause-grid/cause-grid.com
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ProjectGridComponent } from './components/project/project-grid/project-grid.component';
 import { ProjectModalComponent } from './components/project/project-modal/project-modal.component';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { ProjectCardsComponent } from './components/project/project-cards/project-cards.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -19,15 +23,20 @@ import { ProjectModalComponent } from './components/project/project-modal/projec
     CauseModalComponent,
     CauseGridComponent,
     ProjectGridComponent,
-    ProjectModalComponent
+    ProjectModalComponent,
+    ProjectCardsComponent  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatTableModule,
+    MatCardModule
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 export const environment = {
 
-    backendUrl: 'localhost:8088',
+    backendUrl: 'http://localhost:8088',
     cause: {
         getAllCauses: '/api/causes',
         getCauseById: '/api/causes/',
