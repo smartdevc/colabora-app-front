@@ -12,6 +12,8 @@ export class Project {
     private _dateStart!: string;
 
     private _dateEnd!: string;
+
+    private _imageUrl!: string;
     
     public get id(): number {
         return this._id;
@@ -49,5 +51,13 @@ export class Project {
     }
     public set dateEnd(value: string) {
         this._dateEnd = value;
+    }
+
+    public get imageUrl(): string { // Getter para imageUrl
+        return this._imageUrl;
+    }
+
+    public set imageUrl(value: string) { // Setter para imageUrl
+        this._imageUrl = value;
     }
 }
